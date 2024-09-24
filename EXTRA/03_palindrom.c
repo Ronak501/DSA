@@ -1,4 +1,3 @@
-// Check the string for the PALINDROME provided middle character is always 'x' and 'x' is not used elsewhere in the string using Stack.
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -15,13 +14,13 @@ void main()
     char s[MAX], b;
     while (1)
     {
-        printf("1-Enter string\n2-Exit\n");
-        printf("Enter your choice\n");
+        printf("\n1-Enter string\n2-Exit");
+        printf("\nEnter your choice:");
         scanf("%d", &choice);
         switch (choice)
         {
         case 1:
-            printf("Enter the String\n");
+            printf("\nEnter the String:");
             scanf("%s", s);
             for (i = 0;s[i] != '\0';i++)
             {
@@ -37,19 +36,19 @@ void main()
                 }
                 else
                 {
-                    printf("%s is not a palindrome\n", s);
+                    printf("\n%s is not a palindrome", s);
                     break; 
                 }
             }
             if ((strlen(s) / 2)  ==  front)
-                printf("%s is palindrome\n",  s);
+                printf("\n%s is palindrome",  s);
             front  =  0;
             top  =  -1;
             break;
         case 2:
             exit(0);
         default:
-            printf("Enter correct choice\n");
+            printf("Enter correct choice");
         }
     }
 }
